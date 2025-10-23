@@ -1,0 +1,237 @@
+/* Importation des polices depuis Google Fonts :
+   - 'Great Vibes' pour les titres cursifs
+   - 'Quicksand' pour le texte général */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;500;700&display=swap');
+
+/* 🎨 Style général du corps de la page */
+body {
+  font-family: 'Quicksand', sans-serif; /* Police principale */
+  background: linear-gradient(180deg, #fff1f4 0%, #ffe6ef 100%); /* Dégradé rose clair vertical */
+  color: #5a3b3b; /* Couleur du texte */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+  position: relative;
+}
+
+/* 🧩 Conteneur principal du contenu */
+main {
+  max-width: 700px; /* Largeur maximale centrée */
+  margin: 50px auto; /* Centrage horizontal + espacement vertical */
+  background: rgba(255, 255, 255, 0.8); /* Fond semi-transparent */
+  border-radius: 20px; /* Coins arrondis */
+  box-shadow: 0 6px 15px rgba(255, 182, 193, 0.3); /* Ombre douce */
+  padding: 30px;
+  backdrop-filter: blur(6px); /* Effet de flou derrière le conteneur */
+}
+
+/* ✨ Titre principal */
+h1 {
+  font-family: 'Great Vibes', cursive; /* Police élégante */
+  font-size: 3.5rem;
+  color: #e58ca3; /* Rose pastel */
+  text-align: center;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(255, 240, 245, 0.8); /* Légère ombre lumineuse */
+}
+
+/* 🌸 Sous-titres (h2 et h3) */
+h2, h3 {
+  font-family: 'Great Vibes', cursive;
+  color: #f19ca7;
+  font-weight: normal;
+  margin-top: 30px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* 🔗 Style des liens */
+a {
+  color: #e68ca3;
+  text-decoration: none; /* Retire le soulignement */
+  font-weight: 600;
+  transition: 0.3s; /* Animation fluide au survol */
+}
+
+a:hover {
+  color: #ffb6c1; /* Couleur plus claire au survol */
+  text-shadow: 0 0 6px rgba(255, 182, 193, 0.5); /* Effet lumineux */
+}
+
+/* 📝 Conteneur du formulaire */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Centrage vertical sur toute la hauteur */
+}
+
+/* 🧾 Style du formulaire */
+form {
+  background: #ffe6ef;
+  padding: 30px;
+  border-radius: 15px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.4);
+}
+
+form h2 {
+  color: #d1477f;
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif; /* Police différente pour le titre du formulaire */
+}
+
+/* ✏️ Champs de texte et zone de saisie */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 20px 0;
+  border: 2px solid #f8c8d8;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* 🩷 Bouton d’envoi du formulaire */
+input[type="submit"] {
+  background-color: #d1477f;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #b03b6c; /* Couleur plus sombre au survol */
+}
+
+/* Effet focus (bord rose vif lors de la sélection du champ) */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border-color: #d1477f;
+  outline: none;
+}
+
+/* 🌸 Icône décorative avant le formulaire */
+form::before {
+  content: "🌸";
+  font-size: 50px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* 📜 Pied de page */
+footer {
+  text-align: center;
+  padding: 15px;
+  color: #7a4a5a;
+  background-color: #ffe6ef;
+  border-top: 2px solid #ffd5e0;
+  font-size: 0.9em;
+}
+
+/* 🌸 Animation des pétales tombantes */
+.petal {
+  position: fixed;
+  top: -10vh; /* Commence au-dessus de la fenêtre */
+  background: rgba(255, 182, 193, 0.9);
+  border-radius: 50%; /* Forme ronde */
+  width: 12px;
+  height: 12px;
+  pointer-events: none; /* Ne bloque pas les clics */
+  opacity: 0.8;
+  animation: fall linear infinite; /* Animation continue de chute */
+  z-index: 1;
+}
+
+/* 🎞️ Animation de chute */
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+}
+
+/* Variantes aléatoires pour les pétales (taille, vitesse, couleur) */
+.petal:nth-child(3n) {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 200, 210, 0.8);
+  animation-duration: 10s;
+}
+
+.petal:nth-child(2n) {
+  width: 15px;
+  height: 15px;
+  animation-duration: 13s;
+  animation-delay: 2s;
+}
+
+.petal:nth-child(4n) {
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 160, 180, 0.7);
+  animation-duration: 11s;
+}
+
+/* --- Tableaux Sakura --- */
+table {
+  width: 90%;
+  margin: 40px auto;
+  border-collapse: collapse;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fff7fa;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.4);
+  text-align: center;
+}
+
+/* En-tête */
+table thead {
+  background: linear-gradient(90deg, #f7b4c2, #f6a1b6);
+  color: white;
+}
+
+table th {
+  padding: 14px 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #fdd8e2;
+}
+
+/* Corps */
+table td {
+  padding: 12px 20px;
+  border-bottom: 1px solid #ffe3ed;
+  color: #5a3b3b;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Lignes alternées */
+table tbody tr:nth-child(even) {
+  background-color: #fff0f5;
+}
+
+/* Effet au survol */
+table tbody tr:hover {
+  background-color: #ffe6ef;
+  transform: scale(1.01);
+}
+
+/* Pied du tableau */
+table tfoot td {
+  background-color: #ffe6ef;
+  font-weight: bold;
+  color: #a15a72;
+  padding: 12px;
+}

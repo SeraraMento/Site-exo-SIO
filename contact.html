@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signe of Affection</title>
+
+<link rel="stylesheet" href="CSS.css"/>
+
+<link rel="icon" href="Capture d'écran 2024-12-28 225445.png">
+</head>
+
+<body>
+
+  <!-- Animation pétales -->
+  <script>
+    for (let i = 0; i < 25; i++) {
+      const petal = document.createElement('div');
+      petal.classList.add('petal');
+      petal.style.left = Math.random() * 100 + 'vw';
+      petal.style.animationDuration = 8 + Math.random() * 6 + 's';
+      petal.style.animationDelay = Math.random() * 5 + 's';
+      document.body.appendChild(petal);
+    }
+  </script>
+
+  <!-- Header -->
+  <header>
+    <h1>Contact</h1>
+    <nav>
+      <ul>
+        <li><a href="maine.html">Main</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Formulaire centré -->
+  <main>
+    <section class="form-container">
+      <form>
+        <h2>Des questions ?</h2>
+        <ul>
+          <li><p>Ta question ?</p><input type="text"></li>
+          <li><p>Ton mail ?</p><input type="email"></li>
+          <li><p>Celà t'a-t-il donné envie de voir ces mangas ?</p><input type="checkbox"></li>
+          <li><input type="submit"></li>
+        </ul>
+      </form>
+    </section>
+
+    <!-- Gif décoratif -->
+  <section class = "form-container">
+    <div class="tenor-gif-embed" data-postid="9733721855800993677" data-share-method="host" data-aspect-ratio="1.08844" data-width="75%">
+      <a href="https://tenor.com/view/evernightdanse-evernight-gif-9733721855800993677">Evernightdanse Ever night Sticker</a> from <a href="https://tenor.com/search/evernightdanse-stickers">Evernightdanse Stickers</a>
+    </div>
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+  </section>
+  </main>
+
+  
+
+  <footer>
+    &copy; 2025 E2SE Tristan Bento
+  </footer>
+</body>
+</html>
